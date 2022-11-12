@@ -1,0 +1,22 @@
+USE [InfoPer]
+GO
+
+ Object  Table [dbo].[usuariosarioc]    Script Date 11112022 181042 
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[usuariosarioc](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Nombre] [nvarchar](100) NULL,
+	[Correo] [nvarchar](100) NULL,
+	[Telefono] [nvarchar](100) NULL,
+ CONSTRAINT [PK_usuariosarioc] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
