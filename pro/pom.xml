@@ -73,45 +73,50 @@
 		</plugins>
 	</build>
 
-			<profiles>
-				<profile>
-					<id>dev</id>
-					<activation>
-						<activeByDefault>false</activeByDefault>
-					</activation>
-					<properties>
-						<usr>${usr}</usr>
-						<adminuser>${adminusr}</adminuser>
-						<admincls>${admincls}</admincls>
-					</properties>
-				</profile>
+	<profiles>
 
-				<profile>
-					<id>pro</id>
-					<activation>
-						<activeByDefault>true</activeByDefault>
-					</activation>
-					<properties>
-						<usr>${usr}</usr>
-						<cls>${cls}</cls>
-						<adminuser>${adminusr}</adminuser>
-						<admincls>${admincls}</admincls>
-					</properties>
-				</profile>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<spring.profiles.activate>dev</spring.profiles.activate>
+				<usr>${usuario}</usr>
+				<cls>${clave}</cls>
+				<adminuser>${usradmin}</adminuser>
+				<admincls>${clsadmin}</admincls>
+			</properties>
+		</profile>
 
-				<profile>
-					<id>prepro</id>
-					<activation>
-						<activeByDefault>false</activeByDefault>
-					</activation>
-					<properties>
-						<usr>${usr}</usr>
-						<cls>${cls}</cls>
-						<adminuser>${adminusr}</adminuser>
-						<admincls>${admincls}</admincls>
-					</properties>
-				</profile>
-			</profiles>
+		<profile>
+			<id>pro</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+				<spring.profiles.activate>pro</spring.profiles.activate>
+				<usr>${usuario}</usr>
+				<cls>${clave}</cls>
+				<adminuser>${usradmin}</adminuser>
+				<admincls>${clsadmin}</admincls>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>prepro</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+				<spring.profiles.activate>prepro</spring.profiles.activate>
+				<usr>${usuario}</usr>
+				<cls>${clave}</cls>
+				<adminuser>${usradmin}</adminuser>
+				<admincls>${clsadmin}</admincls>
+			</properties>
+		</profile>
+	</profiles>
 
 
 </project>

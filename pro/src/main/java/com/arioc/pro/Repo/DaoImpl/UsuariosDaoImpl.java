@@ -37,7 +37,7 @@ public class UsuariosDaoImpl implements UsuariosDao {
 
     @Override
     public void guardar(Usuarios usuarios) {
-        SimpleJdbcInsert jdbcInsert = new SimpleJdbcInsert(Configuracion.getDataSource())
+        SimpleJdbcInsert jdbcInsert = new SimpleJdbcInsert(jdbcTemplate)
                 .withTableName("usuariosarioc")
                 .usingGeneratedKeyColumns("id");
         Map<String,Object> parameters = new HashMap<>();

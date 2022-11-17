@@ -16,12 +16,12 @@ public class Configuracion {
     String clave;
 
     @Bean
-    public static DataSource getDataSource()
+    public DataSource getDataSource()
     {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.url("jdbc:sqlserver://192.168.10.136;encrypt=true;databaseName=infoPer;trustserverCertificarte=true");
-        dataSourceBuilder.username("sa");
-        dataSourceBuilder.password("sqlserver");
+        dataSourceBuilder.username(usuario);
+        dataSourceBuilder.password(clave);
         return dataSourceBuilder.build();
     }
 }
