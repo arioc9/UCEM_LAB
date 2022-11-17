@@ -47,4 +47,14 @@ public class UsuariosControlador {
     public void guardar(@RequestBody  Usuarios usuarios) {
         usuariosService.guardar(usuarios);
     }
+
+    @DeleteMapping("/eliminar/{id}")
+    public void eliminarPersona(Integer id){
+        usuariosService.eliminar(id);
+    }
+
+    @PostMapping("/actualizar")
+    public void ActualizarPersona(@RequestBody Usuarios usuarios){
+        usuariosService.Actualizar(usuarios);
+    }
 }

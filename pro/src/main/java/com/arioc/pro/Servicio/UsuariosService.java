@@ -28,4 +28,12 @@ public class UsuariosService {
     public void guardar(Usuarios usuarios) {
          usuariosDao.guardar(usuarios);
     }
+
+    public void eliminar(Integer id){
+        usuariosDao.eliminar(id);
+    }
+
+    public void Actualizar(Usuarios usuarios){
+        usuariosDao.Actualizar(usuarios);
+    }
 }

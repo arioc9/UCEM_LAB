@@ -11,4 +11,9 @@ public interface UsuariosDao {
     Usuarios Obtenerporid(Integer id);
 
     void guardar(Usuarios usuarios);
+
+    void eliminar(Integer id);
+
+    void Actualizar(Usuarios usuarios);
+
 }
